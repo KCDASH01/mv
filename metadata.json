@@ -1,0 +1,10 @@
+{
+  "name": "Digital MV Customer Service Management System",
+  "description": "Unified medium-voltage electrical equipment customer service management platform for Alfanar Electrical Systems by Kanpri Technologies LLP.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
