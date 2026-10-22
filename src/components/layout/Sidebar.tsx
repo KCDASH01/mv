@@ -31,6 +31,7 @@ import {
   BellRing,
   ChevronRight,
   ShieldCheck,
+  BookOpen,
 } from 'lucide-react';
 import { db } from '../../services/db';
 
@@ -98,6 +99,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onNavigate, collap
         { id: 'audit_trail', label: '18 Audit Trail', icon: History },
         { id: 'users', label: '19 Users & RBAC', icon: Users },
         { id: 'notifications', label: '20 Notifications & SLA', icon: BellRing },
+        { id: 'user_manual', label: 'User Manual & SOP', icon: BookOpen, highlight: true },
       ],
     },
   ];

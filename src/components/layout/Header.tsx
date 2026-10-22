@@ -16,7 +16,8 @@ import {
   Layers, 
   FileCheck,
   LogOut,
-  ChevronDown
+  ChevronDown,
+  BookOpen
 } from 'lucide-react';
 import { db } from '../../services/db';
 
@@ -115,6 +116,20 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenMa
 
         {/* Zone 3: Primary Actions & Role Profile */}
         <div className="flex items-center gap-3 shrink-0">
+          {/* User Manual Button */}
+          <button
+            onClick={() => onNavigate('user_manual')}
+            className={`hidden md:flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+              currentTab === 'user_manual'
+                ? 'bg-amber-400 text-slate-900 shadow-sm'
+                : 'text-amber-300 bg-amber-950/60 hover:bg-amber-900 border border-amber-800'
+            }`}
+            title="Read Detailed Operations & User Manual"
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            <span>User Manual</span>
+          </button>
+
           {/* Requirements Matrix Button */}
           <button
             onClick={onOpenMatrix}

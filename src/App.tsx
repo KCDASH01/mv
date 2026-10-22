@@ -39,6 +39,7 @@ import { ReportsView } from './modules/17_Reports/ReportsView';
 import { AuditTrailView } from './modules/18_AuditTrail/AuditTrailView';
 import { UsersRolesView } from './modules/19_Users/UsersRolesView';
 import { NotificationsView } from './modules/20_Notifications/NotificationsView';
+import { UserManualView } from './modules/UserManual/UserManualView';
 
 const MainShell: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<string>('dashboard');
@@ -194,6 +195,10 @@ const MainShell: React.FC = () => {
 
             {currentTab === 'notifications' && (
               <NotificationsView />
+            )}
+
+            {currentTab === 'user_manual' && (
+              <UserManualView onNavigateToTab={setCurrentTab} />
             )}
           </div>
         </main>

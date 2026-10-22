@@ -35,6 +35,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenMatrix, onNavigate }) => {
         {/* Quick Links & Actions */}
         <div className="flex items-center gap-4 text-slate-400 text-xs">
           <button
+            onClick={() => onNavigate('user_manual')}
+            className="text-amber-400 hover:text-amber-300 font-medium transition-colors underline-offset-4 hover:underline"
+          >
+            User Manual
+          </button>
+          <span>·</span>
+          <button
             onClick={onOpenMatrix}
             className="hover:text-white transition-colors underline-offset-4 hover:underline"
           >
